@@ -25,7 +25,7 @@
 
 
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://s8.uupload.ir/files/chart_q8fz.jpeg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://s8.uupload.ir/files/chart_q8fz.jpeg" width="500" alt="Nest Logo" /></a>
 </p>
 
 
