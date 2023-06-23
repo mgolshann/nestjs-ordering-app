@@ -10,7 +10,14 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Ordering App](https://github.com/nestjs/nest) is a small app which consists of several microservices. Auth microservice allow users to login and logout. After logging 
+
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
 
 ## Installation
 
