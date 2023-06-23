@@ -10,13 +10,14 @@
 
 ## Description
 
-[Ordering App](https://github.com/nestjs/nest) is a small app which consists of several microservices. Auth microservice allow users to login and logout. After logging 
+[Ordering App](https://github.com/nestjs/nest) is a small app which consists of several microservices. In these projects I use Rabbitmq as a Message Broker that allows all microservices to communicate with each other. You first need to log in to the auth service and get your jwt token in your cookie. then you can create order.
 
 
 | Command | Description |
 | --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+| `Auth` | You can *login* and *logout* and get your *jwt token* to have permission to create order |
+| `Order` | You can create order if you have *jwt token* |
+| `Invoice` | When Order is created a RPC Call hit the Invoice service and your invoice message generated |
 
 
 ## Installation
