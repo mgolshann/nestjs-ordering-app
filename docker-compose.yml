@@ -1,0 +1,62 @@
+version: '3'
+services:
+  envoy_gateway:
+    build: envoy/
+    ports:
+      - "10000:10000"
+    volumes:
+      - ./envoy/envoy.yaml:/etc/envoy/envoy.yaml
+
+  auth:
+    build:
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    command: npm run start:dev auth
+    ports:
+      - '3001:3001'
+    env_file:
+      - ./apps/auth/.env
+    depends_on:
+      - rabbitmq
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  orders:
+    build:
+      context: .
+      dockerfile: ./apps/orders/Dockerfile
+      target: development
+    command: npm run start:dev orders
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./apps/orders/.env
+    depends_on:
+      - rabbitmq
+      - auth
+      - invoice
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  invoice:
+    build:
+      context: .
+      dockerfile: ./apps/invoice/Dockerfile
+      target: development
+    command: npm run start:dev invoice
+    env_file:
+      - ./apps/invoice/.env
+    depends_on:
+      - rabbitmq
+      - auth
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - '5672:5672'
