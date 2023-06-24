@@ -32,7 +32,7 @@ These endpoints allow you to test Ordering app through Postman.
 
 ## GET
 
-| Services | Description |
+| Services | Request Method | Description |
 | --- | --- |
 | `http://localhost:10000/users` | get list of users. |
 | `http://localhost:10000/orders` | get list of orders. |
