@@ -30,18 +30,31 @@ $ docker-compose up
 
 These endpoints allow you to test Ordering app through Postman.
 
+## GET
 
-| Services | Request Method | Description |
+| Services | Description |
 | --- | --- |
-| `http://localhost:10000/users` | GET | get list of users. |
-| `http://localhost:10000/orders` | GET | get list of orders. |
-| `http://localhost:10000/auth/whoami` | GET | get current user. |
-| `http://localhost:10000/auth/logout` | GET | logout user. |
-| `http://localhost:10000/users` | POST | user create. |
-| `http://localhost:10000/auth/login` | POST | login user. |
-| `http://localhost:10000/orders` | POST | order create. |
-| `http://localhost:10000/users/:id` | DELETE | delete user. |
+| `http://localhost:10000/users` | get list of users. |
+| `http://localhost:10000/orders` | get list of orders. |
+| `http://localhost:10000/auth/whoami` | get current user. |
+| `http://localhost:10000/auth/logout` | logout user. |
 
+
+## GET
+
+| Services | Description |
+| --- | --- |
+| `http://localhost:10000/users` | get list of users. |
+| `http://localhost:10000/orders` | get list of orders. |
+| `http://localhost:10000/auth/whoami` | get current user. |
+| `http://localhost:10000/auth/logout` | logout user. |
+
+
+## POST
+`http://localhost:10000` [/1/billing/start-trial.json](#post-1billingstart-trialjson) <br/>
+`http://localhost:10000` [/1/billing/cancel-trial.json](#post-1billingcancel-trialjson) <br/>
+`http://localhost:10000` [/1/billing/start-or-update-subscription.json](#post-1billingstart-or-update-subscriptionjson) <br/>
+`http://localhost:10000` [/1/billing/cancel-subscription.json](#post-1billingcancel-subscriptionjson) <br/>
 ___
 
 
