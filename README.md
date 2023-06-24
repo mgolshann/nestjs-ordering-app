@@ -3,12 +3,11 @@
 
 [Ordering App](https://github.com/nestjs/nest) is a small app which consists of several microservices. In these projects I use Rabbitmq as a Message Broker that allows all microservices to communicate through HTTP and RPC calls with each other. You first need to log in to the auth service and get your jwt token in your cookie. then you can create order.
 
-<br><br>
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://s8.uupload.ir/files/test_zjho.jpg" width="700" alt="Nest Logo" /></a>
 </p>
 
-<br><br>
+<br>
 
 ## Installation
 The only requirement in order to have the Ordering app is to have Docker Compose in your machine. Other requirements will be installed automatically by docker compose. 
@@ -17,7 +16,7 @@ The only requirement in order to have the Ordering app is to have Docker Compose
 $ docker-compose up
 ```
 
-<br><br>
+<br>
 
 
 ## Services
@@ -29,7 +28,7 @@ $ docker-compose up
 | `RabbitMQ` | Allow different microservices communicate through *HTTP and RPC calls*. |
 | `Envoy Proxy` | Is a wonderful tool to be used as a *Gateway*. |
 
-<br><br>
+<br>
 
 
 # API Endpoints
