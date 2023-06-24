@@ -31,11 +31,15 @@ $ docker-compose up
 These endpoints allow you to test Ordering app through Postman.
 
 ## GET
+
+| Services | Description |
 | --- | --- |
 | `http://localhost:10000/users` | get list of users. |
 | `http://localhost:10000/orders` | get list of orders. |
 | `http://localhost:10000/auth/whoami` | get current user. |
 | `http://localhost:10000/auth/logout` | logout user. |
+
+
 
 ## POST
 `http://localhost:10000` [/1/billing/start-trial.json](#post-1billingstart-trialjson) <br/>
