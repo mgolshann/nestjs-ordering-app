@@ -11,7 +11,7 @@ export class InvoiceService {
 
   async invoice(data: any) {
     this.logger.log('invoice ...', data)
-    console.log('your order has been saved...')
+    console.log('your order has been created successfully...')
   }
   
 }
