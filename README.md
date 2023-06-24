@@ -57,6 +57,4 @@ ___
 - Linkedin - [https://www.linkedin.com/in/mgolshann/](https://www.linkedin.com/in/mgolshann/)
 - Gmail - [mgolshan.ir@gmail.com](https://gmail.com/)
 <br><br>
-## License
-
-Nest is [MIT licensed](LICENSE).
+Copyright 2023 Mohammad Golshan <mgolshan.ir.@gmail.com>
