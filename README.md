@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://s8.uupload.ir/files/test_zjho.jpg" width="700" alt="Nest Logo" /></a>
-</p><br /><br />
+</p>
 
 
 
@@ -31,16 +31,16 @@ $ docker-compose up
 These endpoints allow you to test Ordering app through Postman.
 
 
-| End Point | Request Method | Description |
-| --- | --- | --- |
-| `http://localhost:10000/users` | GET | get list of users. |
-| `http://localhost:10000/orders` | GET | get list of orders. |
-| `http://localhost:10000/auth/whoami` | GET | get current user. |
-| `http://localhost:10000/auth/logout` | GET | logout user. |
-| `http://localhost:10000/users` | POST | user create. |
-| `http://localhost:10000/auth/login` | POST | login user. |
-| `http://localhost:10000/orders` | POST | order create. |
-| `http://localhost:10000/users/:id` | DELETE | delete user. |
+| End Point | Method | Requirements | Description |
+| --- | --- | --- | --- |
+| `http://localhost:10000/users` | GET | -- | get list of users. |
+| `http://localhost:10000/orders` | GET | -- | get list of orders. |
+| `http://localhost:10000/auth/whoami` | GET | -- | get current user. (jwt required) |
+| `http://localhost:10000/auth/logout` | GET | -- | logout user. |
+| `http://localhost:10000/users` | POST | {"name":"ali@gmail.com", "password":"1234"} | user create. (jwt required)|
+| `http://localhost:10000/auth/login` | POST | {"name":"ali@gmail.com", "password":"1234"} | login user. |
+| `http://localhost:10000/orders` | POST | {"name":"pen", "count":"2", "price":"10"} | order create. (jwt required)|
+| `http://localhost:10000/users/:id` | DELETE | -- | delete user. |
 
 
 
