@@ -26,7 +26,11 @@ static_resources:
               domains: ["*"]
               routes:
               - match: { prefix: "/admin"}
-                direct_response: {status: 403, body: { inline_string: "Forbidden, yo"} }           
+                direct_response: {status: 403, body: { inline_string: "Forbidden, yo"} } 
+              - match:
+                  prefix: "/users"
+                route:
+                  cluster: auth_service          
               - match:
                   prefix: "/auth"
                 route:

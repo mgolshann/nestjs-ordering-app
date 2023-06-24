@@ -21,7 +21,6 @@ export class AuthController {
     response.send(user);
   }
 
-
   @Get('logout')
   logout(@Res({ passthrough: true }) response: Response) {
     return this.authService.logout(response)
@@ -33,4 +32,9 @@ export class AuthController {
     return user;
   }
 
+  @Get('whoami')
+  @UseGuards(JwtAuthGuard)
+  async getCurrentUser(@CurrentUser() user: IUser) {
+    return user;
+  }
 }
